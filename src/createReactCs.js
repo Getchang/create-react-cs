@@ -1,3 +1,5 @@
+'use strict';
+
 const currentNodeVersion = process.versions.node;
 const semver = currentNodeVersion.split('.');
 const major = semver[0];
@@ -7,6 +9,6 @@ if (major < 14) {
   process.exit(1);
 }
 
-const { init } = require('./main.js');
+const { init } = require('./createReactApp');
 
 init();
